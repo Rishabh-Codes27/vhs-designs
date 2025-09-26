@@ -1,0 +1,46 @@
+.glow-text {
+  position: relative;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 0 8px #00ff8e, 0 0 14px #00ff8e, 0 0 20px #ff2020,
+    0 0 30px #ff2020;
+}
+
+.glow-secondarytext {
+  position: relative;
+  color: #FF991C;
+  font-weight: 700;
+  text-shadow: 0 0 20px #ff2020,
+    0 0 30px #ff2020;
+}
+
+/* chromatic abberation effect */
+
+.color-shift{
+    position: relative;
+    color: white;
+}
+
+.color-shift::before,
+.color-shift::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+}
+
+.color-shift::before{
+    left: 2px;
+    text-shadow: -2px 0 red;
+    clip-path: inset(0 70% 0 0 );
+}
+
+.color-shift::before{
+    left: -2px;
+    text-shadow: 2px 0 cyan;
+    clip-path: inset(0  0 0  70%);
+}
+
